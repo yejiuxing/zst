@@ -71,9 +71,19 @@
 <tr><td>学历</td> <td><input type="text"></td></tr>
 <tr><td>爱好</td><td><input type="checkbox" name="aihao">吃饭<input type="checkbox" name="aihao">睡觉<input type="checkbox" name="aihao">打豆豆</td></tr>
 <tr><td>自我介绍</td><td><textarea></textarea></td></tr>
-<tr><td></td><td><input type="submit" value="免费注册"></td></tr>
+<tr><td></td><td><input type="submit" id="hhh" value="免费注册"></td></tr>
 <tr><td></td> <td><input type="checkbox" checked="checked">我已同意《阅读协议》</td></tr>
-<tr><td></td> <td><a href="#">我是会员，立即登录</a></td></tr>
+<tr><td></td> <td><a href="#" id="zst" >我是会员，立即登录</a></td></tr>
         </form>
     </table>
 </body>
+<script type="text/javascript" >
+    let hhh = document.getElementById('hhh');
+    hhh.onclick = function () {
+        alter("不给你注册");
+    };
+    let zst = document.getElementById('zst');
+    zst.onclick = function () {
+        alter("想不到吧，也不给你登录");
+    };
+</script>
