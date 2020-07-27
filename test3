@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>perfect*</title>
+        <style>
+            
+            .line{
+                width: 300px;
+                height: 300px;
+                margin: 20px auto;
+                border-radius: 50%;
+                
+                /*重复径向渐变*/
+                
+                background-image:repeating-radial-gradient(orange 20px,#ffcc 40px,#ccff 50px);
+                position: relative;
+            }
+            .line::after
+          {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: 10px;
+        height: 500px;
+        border-radius: 0 0 10px 10px;
+        /*线性渐变*/
+        background-image: linear-gradient(to top ,red 20%,orange 40%,lightblue 60%, green 80%);
+            }        
+        
+        </style>
+    </head>
+    <body>
+        <div class="line"></div>
+    </body>
+</html>
