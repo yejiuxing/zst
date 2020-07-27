@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>perfect*</title>
+        <style>
+            body{
+                background-color: #ccc;
+            }
+            .yuang{
+                position: relative;
+                width: 300px;
+                height: 300px;
+                margin: 100px auto;
+                border-radius: 50%;
+                background-color: #000;
+                
+                /*从0-50%用背景色。50%开始到100%用#fff*/
+                background-image: linear-gradient(to right,transparent 50%,#fff 50%);/*图像的线性渐变*/
+            }
+            .yuang::before{
+                
+                content:'';
+                position: absolute;
+                left: 75px;
+                width: 0;
+                height: 0;
+                padding: 25px;
+                border-radius: 50%;
+                border: 50px solid #000;
+                background: #fff;
+                background-clip:padding-box;/*背景被裁剪到内边距框*/
+                
+                
+            }
+            .yuang::after{
+                content:'';
+                position:absolute;
+                top:150px;
+                left:75px;
+                width:0;
+                height:0;
+                padding:25px;
+                border-radius:50%;
+                border:50px solid #fff;
+                background: #000;
+                background-clip:padding-box;
+                
+                
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div class="yuang"></div>
+    </body>
+</html>
